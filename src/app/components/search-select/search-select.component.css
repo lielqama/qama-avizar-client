@@ -1,0 +1,28 @@
+.list-group-item:hover{
+    background-color: var(--info);
+    cursor: pointer;
+}
+.list-group-item.limited{
+    background-color: rgba(217, 50, 55,0.3);
+}
+.list-group-item.limited:hover{
+    background-color: rgba(217, 50, 55,0.3);
+    cursor: not-allowed;
+}
+.list-group-item{
+    text-align: right;
+}
+.card .list-group{
+    max-height: 252px;
+    overflow: hidden;
+    overflow-y: auto;
+    border: 1px rgba(0,0,0,.3) solid;
+    border-top: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+}
+
+input[readonly]{
+    background-color: #f5f6f73d!important;
+}

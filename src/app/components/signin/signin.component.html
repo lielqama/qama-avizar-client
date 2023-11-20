@@ -1,0 +1,40 @@
+<div id="bg"></div>
+
+<div class="row justify-content-center">
+    <div class="col-10 col-md-4  mt-5 p-4 bg-light-opacity rounded ">
+        <div class="w-100 text-center">
+            <h2>ברוכים הבאים</h2>
+        </div>
+
+        <br />
+        <div class="form-group">
+            <div class="control-label">
+               שם משתמש
+            </div>
+            <input [(ngModel)]="agent.UserName" name="username" type="text" class="form-control" />
+        </div>
+        <div class="form-group">
+            <div class="control-label">
+                סיסמה
+            </div>
+            <input [(ngModel)]="agent.Password" name="password" type="password" class="form-control" />
+        </div>
+        <!-- <div class="form-group">
+            <div class="control-label">
+                חברה
+            </div>
+
+            <input [(ngModel)]="company" name="company" type="company" class="form-control"/>
+        </div> -->
+        <div *ngIf="error" class="alert alert-danger">{{error}}</div>
+        <div *ngIf="!loading" class="w-100 text-center mt-5">
+            <div (click)="Login('agent')" class="btn btn-success col-8">כניסה</div>
+            <br />
+        </div>
+
+
+        <div *ngIf="loading" class="w-100 text-center mt-5">
+            <app-loading></app-loading>
+        </div>
+    </div>
+</div>

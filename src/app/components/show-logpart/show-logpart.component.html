@@ -1,0 +1,19 @@
+
+    <div *ngIf="part">
+
+   
+                <h5 class="modal-title" id="exampleModalLabel">פרטי פריט</h5>
+              
+            <div class="modal-body">
+                <div class="row">
+                    
+                                        <h6>{{part.PARTNAME }}  מק"ט</h6>
+                                        <h6>{{part.PARTDES }} שם מוצר</h6>
+                                        <h5>{{part.BALANCE }} מלאי זמין</h5>
+                                        <h5>{{part.BALANCE - part.ORDERS}} מלאי בניכוי הזמנות לקוח</h5>
+                                  
+                                    
+                      
+                    </div>
+                </div>
+            </div>

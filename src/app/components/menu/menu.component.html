@@ -1,0 +1,25 @@
+<nav *ngIf="isAuth" class="navbar navbar-expand-xl navbar-dark fixed-top bg-dark pt-0 pb-0 ml-0 ">
+  <a class="navbar-brand" [routerLink]="['/']">
+    <!-- <img class="site-logo" src="./assets/images/logo-1.png" /> -->
+  </a>
+  <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="navbar-collapse collapse" id="navbarCollapse">
+    <div class="container">
+      <ul class="navbar-nav  text-right">
+       
+    
+        <li class="nav-item ml-auto " data-toggle="collapse" data-target=".navbar-collapse.show">
+          <span class="nav-link">
+            {{userName}}
+            <div class="badge badge-info">{{companyName}}</div>
+          </span>
+        </li>
+        <li class="nav-item mr-auto " [routerLink]="['/signin']" data-toggle="collapse"
+          data-target=".navbar-collapse.show"><span class="nav-link">התנתק</span></li>
+      </ul>
+    </div>
+  </div>
+</nav>

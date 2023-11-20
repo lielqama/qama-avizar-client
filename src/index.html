@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="he">
+
+<head>
+  <meta charset="utf-8">
+  <title>אביזר - מערכת מידע לפריט</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css"
+    integrity="sha384-vus3nQHTD+5mpDiZ4rkEPlnkcyTP+49BhJ4wJeJunw06ZAp+wzzeBPUXr42fi8If" crossorigin="anonymous">
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Alef" rel="stylesheet">
+</head>
+
+<body>
+  <app-root></app-root>
+
+  <script src="https://code.jquery.com/jquery-3.4.0.min.js"
+    integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://cdn.rtlcss.com/bootstrap/v4.2.1/js/bootstrap.min.js"
+    integrity="sha384-a9xOd0rz8w0J8zqj1qJic7GPFfyMfoiuDjC9rqXlVOcGO/dmRqzMn34gZYDTel8k"
+    crossorigin="anonymous"></script>
+  <script>
+    $(document).on('focus', 'input, textarea', function () {
+      $("[data-role='footer']").hide();
+    });
+
+    $(document).on('blur', 'input, textarea', function () {
+      $("[data-role='footer']").show();
+    });
+
+    $(document).on('show.bs.modal', '.modal', function (e) {
+      window.location.hash = "modal";
+    });
+
+    $(window).on('hashchange', function (event) {
+      if (window.location.hash != "#modal") {
+        $('.modal').modal('hide');
+      }
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col-6">
+        <div [class]="'input-group ' + _class">
+            <div class="input-group-prepend" *ngIf="!hideLabel">
+                <span class="input-group-text">חודש</span>
+            </div>
+            <select class="form-control" [required]="required" (change)="isValid($event)" name="selectInput"
+                [ngModel]="month" (ngModelChange)="updateMonth($event)">
+                <option *ngFor="let o of monthOptions" [value]="o.id">{{o.name}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-6">
+        <div [class]="'input-group ' + _class">
+            <div class="input-group-prepend" *ngIf="!hideLabel">
+                <span class="input-group-text">חודש</span>
+            </div>
+            <select class="form-control" [required]="required" (change)="isValid($event)" name="selectInput"
+                [ngModel]="month" (ngModelChange)="updateYear($event)">
+                <option *ngFor="let o of yearOptions" [value]="o.id">{{o.name}}</option>
+            </select>
+        </div>
+    </div>
+</div>

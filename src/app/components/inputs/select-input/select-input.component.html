@@ -1,0 +1,9 @@
+<div [class]="'input-group ' + _class">
+    <div class="input-group-prepend" *ngIf="!hideLabel">
+        <span class="input-group-text">{{label}}</span>
+    </div>
+    <select class="form-control" [required]="required" (change)="isValid($event)" name="selectInput"
+        [ngModel]="innerValue" (ngModelChange)="Update($event)">
+        <option *ngFor="let o of items" [value]="o.id">{{o.name}}</option>
+    </select>
+</div>

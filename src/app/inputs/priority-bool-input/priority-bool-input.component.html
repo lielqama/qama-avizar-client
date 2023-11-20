@@ -1,0 +1,5 @@
+<div [class]="'text-center bool-item ' + _class">
+    <label *ngIf="!hideLabel" class="px-3 m-0 p-0">{{label}}</label>
+    <ui-switch [disabled]="disabled" [ngModel]="innerValue === 'Y'" (ngModelChange)="Update($event)" checkedLabel=".">
+    </ui-switch>
+</div>

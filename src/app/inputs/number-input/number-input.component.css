@@ -1,0 +1,32 @@
+.input-group-text{
+    min-width: 65px;
+}
+
+.form-control{
+    text-align: center;
+}
+
+.number-btn{
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+.number-btn:first-of-type{
+    border-left: 0;
+}
+.number-btn:last-of-type{
+    border-right: 0;
+}
+
+.form-control{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.disabled .number-btn{
+    background-color: lightgray;
+}

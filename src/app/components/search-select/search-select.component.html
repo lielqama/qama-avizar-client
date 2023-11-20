@@ -1,0 +1,13 @@
+<div class="input-group my-2" (click)="focusOut()">
+   
+    <input
+        [class]="'form-control'"
+        (input)="onFilterChange($event)" [(ngModel)]="filter" [placeholder]=placeholder />
+</div>
+<div [class]="'card ' + (hideOptions ? 'invisible' : '')" *ngIf="!hasValue">
+    <ul #options class="list-group list-group-flush">
+        <li *ngFor="let o of items | searchSelectFilter:filter" (click)="selectItem(o)" class="list-group-item">
+            {{o.id}}   &nbsp;   {{o.name}} 
+        </li>
+    </ul>
+</div>

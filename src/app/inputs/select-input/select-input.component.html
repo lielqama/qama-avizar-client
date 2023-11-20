@@ -1,0 +1,13 @@
+<span class="has-float-label" *ngIf="!hide">
+    <select *ngIf="!isLoadnig" name="selectInput" placeholder=" " [required]="required" (input)="isValid($event)"
+        [disabled]="disabled" [id]="uid" [ngModel]="innerValue" (ngModelChange)="Update($event)" type="text"
+        class="form-control">
+        <option *ngFor="let o of items" [value]="o.id">{{o.name}}</option>
+        <option *ngIf="items && items.length === 0" disabled [value]="undifinded">אין נתונים לבחירה</option>
+    </select>
+    <input class="form-control" *ngIf="isLoadnig" placeholder=" " value="טוען נתונים..." disabled />
+
+    <label [attr.for]="uid">{{label}} <span *ngIf="required" class="text-danger">*</span> </label>
+
+    <i *ngIf="help" class="help fa fa-question-circle-o"></i>
+</span>

@@ -1,0 +1,7 @@
+<span [class]="'has-float-label ' + _class">
+    <textarea [attr.name]="'textarea'" [required]="required" (input)="isValid($event)" [attr.rows]="rows"
+        [disabled]="disabled" [ngModel]="plainText" (ngModelChange)="Update($event)" (change)="fireChange()"
+        class="form-control" placeholder=" "></textarea>
+    <label [attr.for]="uid">{{label}} <span *ngIf="required" class="text-danger">*</span> </label>
+    <i *ngIf="help" class="help fa fa-question-circle-o"></i>
+</span>

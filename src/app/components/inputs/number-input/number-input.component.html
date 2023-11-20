@@ -1,0 +1,8 @@
+<div [class]="'input-group ' + _class">
+    <div class="input-group-prepend" *ngIf="!hideLabel">
+        <span class="input-group-text">{{label}}</span>
+    </div>
+    <input name="number" [required]="required" (input)="isValid($event)" [disabled]="disabled" [ngModel]="innerValue"
+        (ngModelChange)="Update($event)" [attr.max]="max" [attr.min]="min" type="number" [attr.step]="step"
+        class="form-control" />
+</div>
