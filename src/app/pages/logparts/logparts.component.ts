@@ -38,8 +38,10 @@ async ngOnInit() {
 public comp():number {
 if (this.model.LOGCOUNTERS_SUBFORM[0]) {
   
-  return this.model.LOGCOUNTERS_SUBFORM[0].BALANCE - this.model.LOGCOUNTERS_SUBFORM[0].ORDERS ; }
-return 0.0;}
+  return   Number((this.model.LOGCOUNTERS_SUBFORM[0].BALANCE  - this.model.LOGCOUNTERS_SUBFORM[0].ORDERS).toFixed(0) ) ;
+ }
+return 0.0;
+}
 
   async  onSelectpart(){
     
